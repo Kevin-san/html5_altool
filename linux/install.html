@@ -1,0 +1,109 @@
+<div class="article-intro" id="content">
+	<h1><span class="color_h1">Linux </span> 安装</h1>
+	<p>本章节我们将为大家介绍 Linux 的安装。</p>
+	<p>本章节以 centos6.4 为例。</p>
+
+	<p></p>
+	<p>centos 下载地址：</p>
+	<p>可以去官网下载最新版本：<a href="https://www.centos.org/download/" target="_blank" rel="noopener noreferrer">https://www.centos.org/download/</a></p>
+	<p><img src="img/linux/linux_install.jpg"></p>
+	<p>以下针对各个版本的ISO镜像文件，进行一一说明：</p>
+	<ul><li><strong>CentOS-7.0-x86_64-DVD-1503-01.iso  </strong>:            标准安装版，一般下载这个就可以了（推荐）
+	</li><li><strong>CentOS-7.0-x86_64-NetInstall-1503-01.iso </strong>:      网络安装镜像（从网络安装或者救援系统）
+	</li><li><strong>CentOS-7.0-x86_64-Everything-1503-01.iso</strong>:     对完整版安装盘的软件进行补充，集成所有软件。（包含centos7的一套完整的软件包，可以用来安装系统或者填充本地镜像）
+	</li><li><strong>CentOS-7.0-x86_64-GnomeLive-1503-01.iso</strong>:   GNOME桌面版
+	</li><li><strong>CentOS-7.0-x86_64-KdeLive-1503-01.iso</strong>:         KDE桌面版
+	</li><li><strong>CentOS-7.0-x86_64-livecd-1503-01.iso  </strong>:          光盘上运行的系统，类拟于winpe 
+	</li><li><strong>CentOS-7.0-x86_64-minimal-1503-01.iso  </strong>:       精简版，自带的软件最少</li></ul>
+
+	<blockquote><p><strong>注：</strong>建议安装64位Linux系统。</p>
+		<p>旧版本下载地址：<a href="https://wiki.centos.org/Download" target="_blank" rel="noopener noreferrer">https://wiki.centos.org/Download</a></p>
+		<p>本地包下载地址：<a href="#" target="_blank">本地软件包目录</a></p>
+	</blockquote>
+	<p>接下来你需要将下载的Linux系统刻录成光盘或U盘。</p>
+	<p><strong>注：</strong>你也可以在Window上安装VMware虚拟机来安装Linux系统。</p>
+	<hr>
+	<h2>Linux 安装步骤</h2>
+	
+	<p>1、首先，使用光驱或U盘或你下载的Linux ISO文件进行安装。 </p>
+	<p>界面说明：</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_001.png" alt="image001" width="576" height="482"></p>
+	<p>Install or upgrade an existing system 安装或升级现有的系统</p>
+	<p>install system with basic video driver 安装过程中采用基本的显卡驱动</p>
+	<p>Rescue installed system 进入系统修复模式</p>
+	<p>Boot from local drive&nbsp;&nbsp; 退出安装从硬盘启动</p>
+	<p>Memory test&nbsp; 内存检测</p>
+	<p>注：用联想E49安装时选择第一项安装时会出现屏幕显示异常的问题，后改用第二项安装时就没有出现问题</p>
+	<p>2、这时直接"skip"就可以了</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_002.png" alt="image002" width="576" height="364"></p>
+	<p>3、出现引导界面，点击"next"</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_003.png" alt="image003" width="576" height="472"></p>
+	<p>4、选中"English（English）"否则会有部分乱码问题</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_004.png" alt="image004" width="576" height="472"></p>
+	<p>5、键盘布局选择"U.S.English"</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_005.png" alt="image005" width="576" height="472"></p>
+	<p>6、选择"Basic Storage Devices"点击"Next"</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_006.png" alt="image006" width="576" height="472"></p>
+	<p>7、询问是否忽略所有数据，新电脑安装系统选择"Yes,discard any data"</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_007.png" alt="image007" width="576" height="472"></p>
+	<p>8、Hostname填写格式"英文名.姓"</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_008.png" alt="image008" width="576" height="472"></p>
+	<p>9、网络设置安装图示顺序点击就可以了</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_009.png" alt="image009" width="576" height="472"></p>
+	<p>10、时区可以在地图上点击，选择"shanghai"并取消System clock uses UTC前面的对勾</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_010.png" alt="image010" width="576" height="472"></p>
+	<p>11、设置root的密码</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_011.png" alt="image011" width="576" height="472"></p>
+	<p>12、硬盘分区，一定要按照图示点选</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_012.png" alt="image012" width="576" height="472"></p>
+	<p>13、调整分区，必须要有/home这个分区，如果没有这个分区，安装部分软件会出现不能安装的问题</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_013.png" alt="image013" width="576" height="472"></p>
+	<p>14、询问是否格式化分区</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_014.png" alt="image014" width="576" height="472"></p>
+	<p>15、将更改写入到硬盘</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_015.png" alt="image015" width="576" height="472"></p>
+	<p>16、引导程序安装位置</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_016.png" alt="image016" width="576" height="472"></p>
+	<p>17、最重要的一步，也是本教程最关键的一步，也是其他教程没有提及的一步，按图示顺序点击</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_017.png" alt="image017" width="576" height="472"></p>
+	<p>18、取消以下内容的所有选项</p>
+	<p><strong>Applications</strong></p>
+	<p><strong>Base System</strong></p>
+	<p><strong>Servers</strong></p>
+	<p>并对Desktops进行如下设置</p>
+	<p>即取消如下选项：</p>
+	<p><strong>Desktop Debugging and Performance Tools</strong></p>
+	<p><strong>Desktop Platform</strong></p>
+	<p><strong>Remote Desktop Clients</strong></p>
+	<p><strong>Input Methods</strong><strong>中仅保留ibus-pinyin-1.3.8-1.el6.x86_64,其他的全部取消</strong></p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_018.png" alt="image018" width="576" height="472"></p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_019.png" alt="image019" width="576" height="472"></p>
+	<p>19、选中Languages，并选中右侧的Chinese Support然后点击红色区域</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_020.png" alt="image020" width="576" height="472"></p>
+	<p>20、调整完成后如下图所示</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_021.png" alt="image021" width="576" height="472"></p>
+	<p>21、至此，一个最精简的桌面环境就设置完成了，</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_022.png" alt="image022" width="576" height="472"></p>
+	<p>22、安装完成，重启</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_023.png" alt="image023" width="576" height="472"></p>
+	<p>23、重启之后，的License Information</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_024.png" alt="image024" width="576" height="370"></p>
+	<p>24、Create User</p>
+	<p>Username：填写您的英文名（不带.姓）</p>
+	<p>Full Name：填写您的英文名.姓（首字母大写）</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_025.png" alt="image025" width="576" height="370"></p>
+	<p>25、"Date and Time" 选中 "Synchronize data and time over the network"</p>
+	<p>Finsh之后系统将重启</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_026.png" alt="image026" width="576" height="370"></p>
+	<p>26、第一次登录，登录前不要做任何更改，这个很重要！！！登录之后紧接着退出</p>
+	<p>第二次登录，选择语言，在红色区域选择下拉小三角，选other，选中"汉语（中国）"</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_027.png" alt="image027" width="576" height="370"></p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_028.png" alt="image028" width="576" height="370"></p>
+	<p>27、登录之后，请一定按照如下顺序点击！</p>
+	<p>至此，CentOS安装完成，如有其他问题，请随时与我联系！！</p>
+	<p><img class="attachment-full" src="img/linux/linux_install_img_029.png" alt="image029" width="576" height="370"></p>
+	
+	<blockquote>
+	<p>如果你使用的是 VMware，可以点击：<a href="#" rel="noopener noreferrer" target="_blank">VMware 安装 Centos7</a></p>
+	</blockquote>
+</div>

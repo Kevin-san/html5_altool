@@ -1,0 +1,63 @@
+<div class="article-intro" id="content">
+<h1>强大好用的Shell</h1>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通常来讲，计算机硬件是由运算器、控制器、存储器、输入/输出设备等共同组成的，而让各种硬件设备各司其职且又能协同运行的就是系统内核。
+Linux系统的内核负责完成对硬件资源的分配、调度等管理任务。由此可见，系统内核对计算机的正常运行来讲是太重要了，因此一般不建议直接去编辑内核中的参数，而是让用户通过基于系统调用接口开发出的程序或服务来管理计算机，以满足日常工作的需要。</p>
+<h2>Shell echo命令</h2>
+<p>Shell 的 echo 指令与 PHP 的 echo 指令类似，都是用于字符串的输出。命令格式：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="kwd">string</span></pre>
+<p>
+您可以使用echo实现更复杂的输出格式控制。
+</p>
+<h3>
+1.显示普通字符串:</h3>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="str">"It is a test"</span></pre>
+<p>
+这里的双引号完全可以省略，以下命令与上面实例效果一致：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="typ">It</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> a test</span></pre><h3>
+2.显示转义字符</h3>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="str">"\"It is a test\""</span></pre>
+<p>
+结果将是:</p>
+<pre class="prettyprint prettyprinted" style=""><span class="str">"It is a test"</span></pre>
+<p>
+同样，双引号也可以省略</p>
+<h3>
+3.显示变量</h3>
+<p>read 命令从标准输入中读取一行,并把输入行的每个字段的值指定给 shell 变量</p>
+<pre class="prettyprint prettyprinted" style=""><span class="com">#!/bin/sh</span><span class="pln">
+read name 
+echo </span><span class="str">"$name It is a test"</span></pre>
+<p>以上代码保存为 test.sh，name 接收标准输入的变量，结果将是: </p>
+<pre class="prettyprint prettyprinted" style=""><span class="pun">[</span><span class="pln">root@www </span><span class="pun">~]#</span><span class="pln"> sh test</span><span class="pun">.</span><span class="pln">sh
+OK                     </span><span class="com">#标准输入</span><span class="pln">
+OK </span><span class="typ">It</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> a test        </span><span class="com">#输出</span></pre>
+<h3>
+4.显示换行</h3>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="pun">-</span><span class="pln">e </span><span class="str">"OK! \n"</span><span class="pln"> </span><span class="com"># -e 开启转义</span><span class="pln">
+echo </span><span class="str">"It is a test"</span></pre>
+<p>输出结果：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">OK</span><span class="pun">!</span><span class="pln">
+
+</span><span class="typ">It</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> a test</span></pre>
+<h3>
+5.显示不换行
+</h3><pre class="prettyprint prettyprinted" style=""><span class="com">#!/bin/sh</span><span class="pln">
+echo </span><span class="pun">-</span><span class="pln">e </span><span class="str">"OK! \c"</span><span class="pln"> </span><span class="com"># -e 开启转义 \c 不换行</span><span class="pln">
+echo </span><span class="str">"It is a test"</span></pre>
+<p>输出结果：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">OK</span><span class="pun">!</span><span class="pln"> </span><span class="typ">It</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> a test</span></pre>
+<h3>
+6.显示结果定向至文件</h3>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="str">"It is a test"</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> myfile</span></pre>
+<h3>
+7.原样输出字符串，不进行转义或取变量(用单引号)</h3>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="str">'$name\"'</span></pre>
+<p>输出结果：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">$name\"</span></pre>
+<h3>
+8.显示命令执行结果</h3><pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="str">`date`</span></pre>
+<p><strong>注意：</strong> 这里使用的是反引号 <span class="marked">`</span>, 而不是单引号 <span class="marked">'</span>。</p>
+<p>
+结果将显示当前日期</p>
+<pre class="prettyprint prettyprinted" style=""><span class="typ">Thu</span><span class="pln"> </span><span class="typ">Jul</span><span class="pln"> </span><span class="lit">24</span><span class="pln"> </span><span class="lit">10</span><span class="pun">:</span><span class="lit">08</span><span class="pun">:</span><span class="lit">46</span><span class="pln"> CST </span><span class="lit">2014</span></pre>			
+</div>

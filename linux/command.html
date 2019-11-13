@@ -12,9 +12,111 @@ Linux系统的内核负责完成对硬件资源的分配、调度等管理任务
 	<strong><em>具有强大的批处理脚本；</em></strong>
 	<strong><em>具有实用的环境变量功能；</em></strong>
 </pre>
+<p>Linux 命令格式 ：</p>
+<pre>命令名称 [命令参数] [命令参数]</pre>
+<h2>Shell man命令</h2>
+<p>Shell 的man 指令用于快速查询Linux帮助手册，并格式化显示。</p>
+<p>man命令中常用按键以及用途</p>
+<table class="table table-bordered table-striped">
+<tbody>
+	<tr>
+		<th>按键</th>
+		<th>用途</th>
+	</tr>
+	<tr>
+		<td>空格键</td>
+		<td>向下翻一页</td>
+	</tr>
+	<tr>
+		<td>Page Down</td>
+		<td>向下翻一页</td>
+	</tr>
+	<tr>
+		<td>Page Up</td>
+		<td>向上翻一页</td>
+	</tr>
+	<tr>
+		<td>Home</td>
+		<td>直接前往首页</td>
+	</tr>
+	<tr>
+		<td>End</td>
+		<td>直接前往尾页</td>
+	</tr>
+	<tr>
+		<td>/</td>
+		<td>从上至下搜索某个关键词，如"/linux"</td>
+	</tr>
+	<tr>
+		<td>?</td>
+		<td>从下至上搜索某个关键词，如"?linux"</td>
+	</tr>
+	<tr>
+		<td>n</td>
+		<td>定位到下一个搜索到的关键词</td>
+	</tr>
+	<tr>
+		<td>N</td>
+		<td>定位到上一个搜索到的关键词</td>
+	</tr>
+	<tr>
+		<td>q</td>
+		<td>退出帮助文档</td>
+	</tr>
+</tbody>
+</table>
+<p>man命令帮助信息的文档结构以及意义</p>
+<table class="table table-bordered table-striped">
+<tbody>
+	<tr>
+		<th>结构名称</th>
+		<th>代表意义</th>
+	</tr>
+	<tr>
+		<td>NAME</td>
+		<td>命令的名称</td>
+	</tr>
+	<tr>
+		<td>SYNOPSIS</td>
+		<td>参数的大致使用方法</td>
+	</tr>
+	<tr>
+		<td>DESCRIPTION</td>
+		<td>介绍说明</td>
+	</tr>
+	<tr>
+		<td>EXAMPLES</td>
+		<td>演示(附带简单说明)</td>
+	</tr>
+	<tr>
+		<td>OVERVIEW</td>
+		<td>概述</td>
+	</tr>
+	<tr>
+		<td>DEFAULTS</td>
+		<td>默认的功能</td>
+	</tr>
+	<tr>
+		<td>?</td>
+		<td>从下至上搜索某个关键词，如"?linux"</td>
+	</tr>
+	<tr>
+		<td>n</td>
+		<td>定位到下一个搜索到的关键词</td>
+	</tr>
+	<tr>
+		<td>N</td>
+		<td>定位到上一个搜索到的关键词</td>
+	</tr>
+	<tr>
+		<td>q</td>
+		<td>退出帮助文档</td>
+	</tr>
+</tbody>
+</table>
 <h2>Shell echo命令</h2>
 <p>Shell 的 echo 指令与 PHP 的 echo 指令类似，都是用于字符串的输出。命令格式：</p>
-<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="kwd">string</span></pre>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">echo </span><span class="kwd">string</span><span> | </span><span class="kwd">$变量</span></pre>
 <p>
 您可以使用echo实现更复杂的输出格式控制。
 </p>
